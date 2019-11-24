@@ -1,5 +1,106 @@
+@import url('https://fonts.googleapis.com/css?family=Dancing+Script&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    background-color: rgba(44, 0, 74, 0.25);
+}
+
+.container {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-rows: 5rem auto 4rem;
+    grid-template-areas:
+        'header header header'
+        'main main aside'
+        'footer footer footer';
+    min-height: 100vh;
+}
+
+header {
+    grid-area: header;
+    background-color: rgba(44, 0, 44, 0.25);
+    font-family: 'Dancing Script', cursive;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+main {
+    grid-area: main;
+}
+
+aside {
+    grid-area: aside;
+}
+
+footer {
+    grid-area: footer;
+    background-color: rgba(255, 255, 255, 0.25);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+p {
+    margin-bottom: 1rem
+}
+
+img {
+    max-width: 100%;
+}
+
+button {
+    border-radius: 99999999px;
+    padding: 0 0.5rem;
+    border-color: transparent;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+table,
+th,
+td {
+    border: 1px solid black;
+    padding: 0 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top:1rem
+}
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+    margin-top:unset;
+  }
+
+@media (min-width: 992px) {
+    .container {
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-rows: 5rem auto 4rem;
+        grid-template-areas:
+            'header header header header header header header'
+            'main main main main main main aside'
+            'footer footer footer footer footer footer footer';
+        width: 80%;
+        margin: auto;
+        min-height: 100vh;
+    }
 }
